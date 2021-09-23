@@ -74,10 +74,12 @@ crashlytics-build.properties
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
 
-#XWeaponTrailフォルダ以下”を除外
+#下記フォルダ以下”を除外
 UniRx/
 UniRx.mata
 UniTask/
 UniTask.mata
 Zenject/
 Zenject.mata
+RainbowAssets/
+RainbowAssets.mata

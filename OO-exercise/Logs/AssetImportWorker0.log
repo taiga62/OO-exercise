@@ -1,0 +1,89 @@
+Using pre-set license
+
+ COMMAND LINE ARGUMENTS:
+/Applications/Unity/Unity.app/Contents/MacOS/Unity
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+/Users/TairaRyuga/Documents/Fork/OO-exercise/OO-exercise
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+52463
+Successfully changed project path to: /Users/TairaRyuga/Documents/Fork/OO-exercise/OO-exercise
+/Users/TairaRyuga/Documents/Fork/OO-exercise/OO-exercise
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 23.78 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2020.3.5f1 (8095aa901b9b)
+[Subsystems] Discovering subsystems at path /Applications/Unity/Unity.app/Contents/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path /Users/TairaRyuga/Documents/Fork/OO-exercise/OO-exercise/Assets
+GfxDevice: creating device client; threaded=0
+2021-09-23 14:03:15.382 Unity[7027:121517] (null) preferred device: Apple M1 (high power)
+2021-09-23 14:03:15.382 Unity[7027:121517] Metal devices available: 1
+2021-09-23 14:03:15.382 Unity[7027:121517] 0: Apple M1 (high power)
+2021-09-23 14:03:15.382 Unity[7027:121517] Using device Apple M1 (high power)
+Initializing Metal device caps: Apple M1
+Initialize mono
+Mono path[0] = '/Applications/Unity/Unity.app/Contents/Managed'
+Mono path[1] = '/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = '/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56027
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: /Applications/Unity/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
+Registered in 0.000378 seconds.
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 25.48 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.722 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.000449 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.20 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.558 seconds
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launching external process: /Applications/Unity/Unity.app/Contents/Tools/UnityShaderCompiler
+Launched and connected shader compiler UnityShaderCompiler after 0.02 seconds
+Refreshing native plugins compatible for Editor in 0.19 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1356 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 118.8 MB.
+System memory in use after: 118.9 MB.
+
+Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 1800.
+Total: 1.216333 ms (FindLiveObjects: 0.115833 ms CreateObjectMapping: 0.026667 ms MarkObjects: 1.012625 ms  DeleteObjects: 0.060666 ms)
+
+========================================================================
+Received Import Request.
+  path: Assets/Plugins/RainbowAssets
+  artifactKey: Guid(2d179837d2a8d734fb2f73b344de6e74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Plugins/RainbowAssets using Guid(2d179837d2a8d734fb2f73b344de6e74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e6dea217610a9b6d7003a3bd6baa0790') in 0.005215 seconds
+  Import took 0.006820 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 34.185288 seconds.
+  path: Assets/@Project/TemplateScene
+  artifactKey: Guid(8c7b207a4742140f0a361ac2b7736502) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/@Project/TemplateScene using Guid(8c7b207a4742140f0a361ac2b7736502) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f1b6e90a6615b11bd2814fec9e476b92') in 0.001371 seconds
+  Import took 0.006890 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.078384 seconds.
+  path: Assets/@Project/TemplateScene/TemplateScene.unity
+  artifactKey: Guid(a8b671a7292e749d38b8f2220c1e2f57) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/@Project/TemplateScene/TemplateScene.unity using Guid(a8b671a7292e749d38b8f2220c1e2f57) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3ecef36e8f4b9cb28387cb607525cef8') in 0.018587 seconds
+  Import took 0.021126 seconds .
+

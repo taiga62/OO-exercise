@@ -76,10 +76,10 @@ crashlytics-build.properties
 
 #下記フォルダ以下”を除外
 UniRx/
-UniRx.mata
+UniRx.meta
 UniTask/
-UniTask.mata
+UniTask.meta
 Zenject/
-Zenject.mata
+Zenject.meta
 RainbowAssets/
-RainbowAssets.mata
+RainbowAssets.meta

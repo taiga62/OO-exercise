@@ -1,13 +1,16 @@
-using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
+using VendingMachinePresenters;
 
-public class VendingMachineView : MonoBehaviour
+namespace VendingMachineViews
 {
-    [SerializeField] private Text _yenText;
-
-    public void ChangeYenText(int money)
+    public class VendingMachineView : MonoBehaviour,IShowableMoney
     {
-        _yenText.text = money+"円";
+        [SerializeField] private Text _yenText;
+
+        public void ChangeYenText(int money)
+        {
+            _yenText.text = money + "円";
+        }
     }
 }

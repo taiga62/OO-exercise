@@ -633,6 +633,7 @@ GameObject:
   - component: {fileID: 1995231909}
   - component: {fileID: 1995231908}
   - component: {fileID: 1995231907}
+  - component: {fileID: 1995231910}
   m_Layer: 0
   m_Name: SceneContext
   m_TagString: Untagged
@@ -672,6 +673,7 @@ MonoBehaviour:
   _scriptableObjectInstallers: []
   _monoInstallers:
   - {fileID: 1995231907}
+  - {fileID: 1995231910}
   _installerPrefabs: []
   _autoRun: 1
   OnPreInstall:
@@ -703,6 +705,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1995231910
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1995231906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0453060814b0e4447b49a8dceb9df08f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2021323875 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2236932027908547041, guid: e150037e4aea2402f831f40d7dcf78a6,
@@ -832,6 +846,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2446521383566580444, guid: 6c7e4048cbfc94c269405f526672873c,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6c7e4048cbfc94c269405f526672873c, type: 3}
 --- !u!1001 &2103264741146834482
@@ -951,6 +970,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4733315856006878537, guid: e150037e4aea2402f831f40d7dcf78a6,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e150037e4aea2402f831f40d7dcf78a6, type: 3}
 --- !u!1001 &7684270410302346606
@@ -960,6 +984,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 663372713}
     m_Modifications:
+    - target: {fileID: 104405398110436694, guid: b38d5132131c6409ba7f08b2be0c373e,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7684270410269109572, guid: b38d5132131c6409ba7f08b2be0c373e,
         type: 3}
       propertyPath: m_Pivot.x
@@ -1079,6 +1108,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 663372713}
     m_Modifications:
+    - target: {fileID: 2090878338272656990, guid: 8d05693451779454788fe97025c454d8,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8220998270495528329, guid: 8d05693451779454788fe97025c454d8,
         type: 3}
       propertyPath: m_Pivot.x

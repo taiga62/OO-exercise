@@ -1,56 +1,64 @@
 using RefactoringCode;
 using UnityEngine;
+using VendingMachinePresenters;
+using VendingMachineViews;
 using Zenject;
 
-public class RefactoringCodeInstaller : MonoInstaller
+namespace VendingMachineInstallers
 {
-    [SerializeField] private GameObject _100Yen;
-    [SerializeField] private GameObject _500Yen;
-    [SerializeField] private GameObject _cola;
-    [SerializeField] private GameObject _colaZero;
-    [SerializeField] private GameObject _tea;
-    public override void InstallBindings()
+    public class RefactoringCodeInstaller : MonoInstaller
     {
-        Container
-            .Bind<RVendingMachineSceneModel>()
-            .AsSingle()
-            .NonLazy();
+        [SerializeField] private GameObject _100Yen;
+        [SerializeField] private GameObject _500Yen;
+        [SerializeField] private GameObject _cola;
+        [SerializeField] private GameObject _colaZero;
+        [SerializeField] private GameObject _tea;
 
-        Container
-            .Bind<CoinView>()
-            .WithId("Yen100")
-            .FromComponentOn(_100Yen)
-            .AsTransient()
-            .NonLazy();
+        public override void InstallBindings()
+        {
+            Container
+                .Bind<RVendingMachineSceneModel>()
+                .AsSingle();
 
-        Container
-            .Bind<CoinView>()
-            .WithId("Yen500")
-            .FromComponentOn(_500Yen)
-            .AsTransient()
-            .NonLazy();
+            Container
+                .Bind<IClickable>()
+                .WithId("Yen100")
+                .To<MoneyView>()
+                .FromComponentOn(_100Yen)
+                .AsTransient();
 
-        Container
-            .Bind<DrinkView>()
-            .WithId("Cola")
-            .FromComponentOn(_cola)
-            .AsTransient()
-            .NonLazy();
+            Container
+                .Bind<IClickable>()
+                .WithId("Yen500")
+                .To<MoneyView>()
+                .FromComponentOn(_500Yen)
+                .AsTransient();
 
-        Container
-            .Bind<DrinkView>()
-            .WithId("ColaZero")
-            .FromComponentOn(_colaZero)
-            .AsTransient()
-            .NonLazy();
-        
-        Container
-            .Bind<DrinkView>()
-            .WithId("Tea")
-            .FromComponentOn(_tea)
-            .AsTransient()
-            .NonLazy();
+            Container
+                .Bind<IClicknableFeedback>()
+                .WithId("Cola")
+                .To<DrinkView>()
+                .FromComponentOn(_cola)
+                .AsTransient();
 
+            Container
+                .Bind<IClicknableFeedback>()
+                .WithId("ColaZero")
+                .To<DrinkView>()
+                .FromComponentOn(_colaZero)
+                .AsTransient();
 
+            Container
+                .Bind<IClicknableFeedback>()
+                .WithId("Tea")
+                .To<DrinkView>()
+                .FromComponentOn(_tea)
+                .AsTransient();
+            
+            //Container.Bind<DrinkPresenter>().AsSingle().NonLazy();
+            Container.Bind<LogPresenter>().AsSingle().NonLazy();
+            //Container.Bind<MoneyPresenter>().AsSingle().NonLazy();
+            //Container.Bind<VendingMachinePresenter>().AsSingle().NonLazy();
+        }
     }
 }

@@ -3,46 +3,50 @@ using Zenject;
 using UniRx;
 using UnityEngine;
 
-public class DrinkPresenter:MonoBehaviour
+namespace VendingMachinePresenters
 {
-    [Inject(Id = "Cola")] private DrinkView _colaView;
-    [Inject(Id = "ColaZero")] private DrinkView _colaZeroView;
-    [Inject(Id = "Tea")] private DrinkView _teaView;
-    [Inject] private LogView _logView;
-    [Inject] private RVendingMachineSceneModel _model;
-
-    private void Start()
+    public class DrinkPresenter
     {
-        Init();
-    }
+        [Inject(Id = "Cola")] private IClicknableFeedback _colaView;
+        [Inject(Id = "ColaZero")] private IClicknableFeedback _colaZeroView;
+        [Inject(Id = "Tea")] private IClicknableFeedback _teaView;
+        [Inject] private IShowableLog _logView;
+        [Inject] private RVendingMachineSceneModel _model;
 
-    private void Init()
-    {
-        SetViewEvent();
-    }
+        private DrinkPresenter()
+        {
+            Init();
+            Debug.Log("inject");
+        }
 
-    private void SetViewEvent()
-    {
-        _colaView.OnClickAsObservable
-            .Subscribe(_ =>
-            {
-                _logView.ChangeOnclickButtnText("コーラ");
-                _model.BuyDrink(0);
-            });
-        
-        _colaZeroView.OnClickAsObservable
-            .Subscribe(_ =>
-            {
-                _logView.ChangeOnclickButtnText("コーラゼロ");
-                _model.BuyDrink(1);
-            });
-        
-        _teaView.OnClickAsObservable
-            .Subscribe(_ =>
-            {
-                _logView.ChangeOnclickButtnText("お茶");
-                _model.BuyDrink(2);
-            });
+        private void Init()
+        {
+            SetViewEvent();
+        }
+
+        private void SetViewEvent()
+        {
+            _colaView.OnClickAsObservable
+                .Subscribe(_ =>
+                {
+                    _logView.ChangeOnclickButtnText("コーラ");
+                    _model.BuyDrink(0);
+                });
+
+            _colaZeroView.OnClickAsObservable
+                .Subscribe(_ =>
+                {
+                    _logView.ChangeOnclickButtnText("コーラゼロ");
+                    _model.BuyDrink(1);
+                });
+
+            _teaView.OnClickAsObservable
+                .Subscribe(_ =>
+                {
+                    _logView.ChangeOnclickButtnText("お茶");
+                    _model.BuyDrink(2);
+                });
+        }
+
     }
-    
 }

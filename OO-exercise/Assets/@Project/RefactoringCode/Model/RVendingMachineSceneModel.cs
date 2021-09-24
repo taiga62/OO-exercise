@@ -25,19 +25,16 @@ namespace RefactoringCode
         public void ReceiveMoneys(int moneys)
         {
             if (_hasMoneys.Value > 0) return;
-            
             _hasMoneys.Value += moneys;
         }
         
         public void BuyDrink(int kind)
         {
-            
             var drink = _rVendingMachine.Buy(_hasMoneys.Value, kind);
             var charge = _rVendingMachine.Refund();
             _hasMoneys.Value = 0;
             
             if (drink == null) return;
-
             _dring.Value = drink;
             _charge.Value = charge;
             

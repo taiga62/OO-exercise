@@ -1,30 +1,29 @@
 using RefactoringCode;
 using Zenject;
 using UniRx;
-using UnityEngine;
 
-public class VendingMachinePresenter:MonoBehaviour
+namespace VendingMachinePresenters
 {
-    [Inject]private readonly VendingMachineView _view;
-    [Inject]private readonly RVendingMachineSceneModel _model;
+    public class VendingMachinePresenter
+    {
+        [Inject] private IShowableMoney _view;
+        [Inject] private RVendingMachineSceneModel _model;
 
-    private void Start()
-    {
-        Init();
-    }
-
-    private void Init()
-    {
-        SetModelEvent();
-    }
-    
-    private void SetModelEvent()
-    {
-        _model.HasMoneys
-            .SkipLatestValueOnSubscribe()
-            .Subscribe(money =>
+        private VendingMachinePresenter()
         {
-            _view.ChangeYenText(money);
-        });
+            Init();
+        }
+
+        private void Init()
+        {
+            SetModelEvent();
+        }
+
+        private void SetModelEvent()
+        {
+            _model.HasMoneys
+                .SkipLatestValueOnSubscribe()
+                .Subscribe(money => { _view.ChangeYenText(money); });
+        }
     }
 }

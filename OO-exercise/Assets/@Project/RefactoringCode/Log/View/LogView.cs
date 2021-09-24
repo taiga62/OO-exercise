@@ -1,29 +1,31 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using VendingMachinePresenters;
 
-public class LogView : MonoBehaviour
+namespace VendingMachineViews
 {
-    [SerializeField] private Text _logText;
-
-    public void ChangeMoneyText(int money)
+    public class LogView : MonoBehaviour,IShowableLog
     {
-        _logText.text = money +"円を投入しました。";
-    }
+        [SerializeField] private Text _logText;
 
-    public void ChangeBuyDrinkText(string text)
-    {
-        _logText.text += "\n" + text+"を購入しました。";
-    }
+        public void ChangeMoneyText(int money)
+        {
+            _logText.text += "\n"+ money + "円を投入しました。";
+        }
 
-    public void ChangeHasChangeText(int money)
-    {
-        _logText.text += "\n" + money + "円のお釣りです。";
-    }
+        public void ChangeBuyedDrinkText(string text)
+        {
+            _logText.text += "\n" + text + "を購入しました。";
+        }
 
-    public void ChangeOnclickButtnText(string text)
-    {
-        _logText.text = text+"ボタンを押しました。";
+        public void ChangeHasChargeText(int charge)
+        {
+            _logText.text += "\n" + charge + "円のお釣りです。";
+        }
+
+        public void ChangeOnclickButtnText(string text)
+        {
+            _logText.text = text + "ボタンを押しました。";
+        }
     }
 }

@@ -6,6 +6,9 @@ using VendingMachinePresenters;
 
 namespace VendingMachineViews
 {
+    /// <summary>
+    /// お金ボタンがクリックされたことを観測
+    /// </summary>
     public class MoneyView : MonoBehaviour,IClickable
     {
         [SerializeField] private Button _button;

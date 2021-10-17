@@ -4,9 +4,9 @@ namespace RefactoringCode
 {
     public class RVendingMachineSceneModel
     {
-        private readonly ReactiveProperty<int> _hasMoneys;
-        private readonly ReactiveProperty<int> _charge;
-        private readonly ReactiveProperty<RDrink> _dring;
+        private readonly ReactiveProperty<int> _hasMoneys;//自販機に入れたお金
+        private readonly ReactiveProperty<int> _charge;//お釣り
+        private readonly ReactiveProperty<RDrink> _dring;//購入したドリンク
 
         public IReactiveProperty<int> HasMoneys => _hasMoneys;
         public IReactiveProperty<int> Charge => _charge;
@@ -22,12 +22,14 @@ namespace RefactoringCode
             _rVendingMachine = new RVendingMachine();
         }
 
+        //お金入れる
         public void ReceiveMoneys(int moneys)
         {
             if (_hasMoneys.Value > 0) return;
             _hasMoneys.Value += moneys;
         }
         
+        //ドリンクを買う
         public void BuyDrink(int kind)
         {
             var drink = _rVendingMachine.Buy(_hasMoneys.Value, kind);

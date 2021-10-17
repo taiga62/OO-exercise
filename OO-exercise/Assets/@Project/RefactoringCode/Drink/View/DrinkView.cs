@@ -7,6 +7,9 @@ using VendingMachinePresenters;
 
 namespace VendingMachineViews
 {
+    /// <summary>
+    /// ドリンクボタンが押されたことの観測とそのリアクション
+    /// </summary>
     public class DrinkView : MonoBehaviour, IClicknableFeedback
     {
         [SerializeField] private Image _drinkimage;
